@@ -1,0 +1,15 @@
+langchain
+langchain-openai
+langchain-community
+langchain-chroma
+langgraph
+chromadb
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+openai
+nltk
+certifi
+langchain-huggingface
+sentence-transformers

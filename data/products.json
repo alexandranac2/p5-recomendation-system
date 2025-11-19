@@ -1,0 +1,422 @@
+[
+    {
+      "id": 1,
+      "name": "Puppy Growth Dog Food",
+      "description": "Rich in calcium and protein, ideal for puppies under 6 months.",
+      "category": "Pet Food",
+      "price": 19.99,
+      "rating": 4.5,
+      "stock": 150,
+      "attributes": {
+        "age_group": "<6m",
+        "use_case": "growth",
+        "brand": "PetPro"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Senior Dog Joint Support Food",
+      "description": "Contains glucosamine and chondroitin for dogs over 7 years.",
+      "category": "Pet Food",
+      "price": 24.99,
+      "rating": 4.7,
+      "stock": 120,
+      "attributes": {
+        "age_group": "7+",
+        "use_case": "joint health",
+        "brand": "PetPro"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Kitten Growth Formula",
+      "description": "High protein for kittens 2-12 months.",
+      "category": "Pet Food",
+      "price": 18.99,
+      "rating": 4.6,
+      "stock": 180,
+      "attributes": {
+        "age_group": "<1y",
+        "use_case": "growth",
+        "brand": "FelinePro"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Weight Management Dog Food",
+      "description": "Low-fat formula for overweight dogs.",
+      "category": "Pet Food",
+      "price": 27.99,
+      "rating": 4.4,
+      "stock": 90,
+      "attributes": {
+        "age_group": "1-7y",
+        "use_case": "weight loss",
+        "brand": "PetPro"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Sensitive Stomach Dog Food",
+      "description": "Easy to digest with lamb and rice.",
+      "category": "Pet Food",
+      "price": 22.99,
+      "rating": 4.6,
+      "stock": 140,
+      "attributes": {
+        "age_group": "1-7y",
+        "use_case": "digestion",
+        "brand": "PetPro"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Nespresso Vertuo Plus",
+      "description": "One-touch coffee machine with 5 cup sizes.",
+      "category": "Electronics",
+      "price": 179.99,
+      "rating": 4.5,
+      "stock": 120,
+      "attributes": {
+        "brand": "Nespresso",
+        "use_case": "coffee",
+        "type": "coffee maker"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Breville Barista Express",
+      "description": "Espresso machine with built-in grinder.",
+      "category": "Electronics",
+      "price": 699.99,
+      "rating": 4.7,
+      "stock": 75,
+      "attributes": {
+        "brand": "Breville",
+        "use_case": "espresso",
+        "type": "espresso machine"
+      }
+    },
+    {
+      "id": 8,
+      "name": "MacBook Pro 14-inch M4",
+      "description": "Professional laptop with M4 chip and 16GB RAM.",
+      "category": "Electronics",
+      "price": 1999.00,
+      "rating": 4.8,
+      "stock": 45,
+      "attributes": {
+        "brand": "Apple",
+        "use_case": "development",
+        "processor": "M4"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Sony WH-1000XM5 Headphones",
+      "description": "Noise canceling headphones with 30-hour battery.",
+      "category": "Electronics",
+      "price": 399.99,
+      "rating": 4.7,
+      "stock": 200,
+      "attributes": {
+        "brand": "Sony",
+        "use_case": "travel",
+        "type": "headphones"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Nike Air Max 270",
+      "description": "Running shoes with Air cushioning.",
+      "category": "Fashion",
+      "price": 150.00,
+      "rating": 4.6,
+      "stock": 180,
+      "attributes": {
+        "brand": "Nike",
+        "use_case": "running",
+        "type": "shoes"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Dell XPS 13 Laptop",
+      "description": "Thin Windows laptop with Intel Core i7.",
+      "category": "Electronics",
+      "price": 1499.00,
+      "rating": 4.6,
+      "stock": 60,
+      "attributes": {
+        "brand": "Dell",
+        "use_case": "business",
+        "processor": "Intel i7"
+      }
+    },
+    {
+      "id": 12,
+      "name": "iPhone 15 Pro",
+      "description": "Smartphone with 48MP camera and A17 chip.",
+      "category": "Electronics",
+      "price": 999.00,
+      "rating": 4.8,
+      "stock": 180,
+      "attributes": {
+        "brand": "Apple",
+        "use_case": "everyday",
+        "type": "smartphone"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Dyson V15 Cordless Vacuum",
+      "description": "Vacuum with laser dust detection.",
+      "category": "Electronics",
+      "price": 649.99,
+      "rating": 4.6,
+      "stock": 90,
+      "attributes": {
+        "brand": "Dyson",
+        "use_case": "cleaning",
+        "type": "vacuum"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Levi's 501 Original Jeans",
+      "description": "Classic straight-leg jeans.",
+      "category": "Fashion",
+      "price": 89.99,
+      "rating": 4.5,
+      "stock": 200,
+      "attributes": {
+        "brand": "Levi's",
+        "use_case": "casual",
+        "type": "jeans"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Patagonia Fleece Jacket",
+      "description": "Warm jacket made from recycled materials.",
+      "category": "Fashion",
+      "price": 139.00,
+      "rating": 4.7,
+      "stock": 120,
+      "attributes": {
+        "brand": "Patagonia",
+        "use_case": "outdoor",
+        "type": "jacket"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Ray-Ban Wayfarer Sunglasses",
+      "description": "Classic sunglasses with UV protection.",
+      "category": "Fashion",
+      "price": 183.00,
+      "rating": 4.8,
+      "stock": 250,
+      "attributes": {
+        "brand": "Ray-Ban",
+        "use_case": "sun protection",
+        "type": "sunglasses"
+      }
+    },
+    {
+      "id": 17,
+      "name": "CeraVe Hydrating Cleanser",
+      "description": "Gentle face cleanser with hyaluronic acid.",
+      "category": "Cosmetics",
+      "price": 14.99,
+      "rating": 4.6,
+      "stock": 300,
+      "attributes": {
+        "brand": "CeraVe",
+        "use_case": "cleansing",
+        "skin_type": "dry"
+      }
+    },
+    {
+      "id": 18,
+      "name": "The Ordinary Niacinamide Serum",
+      "description": "Vitamin B3 serum that reduces blemishes.",
+      "category": "Cosmetics",
+      "price": 6.50,
+      "rating": 4.5,
+      "stock": 500,
+      "attributes": {
+        "brand": "The Ordinary",
+        "use_case": "acne",
+        "skin_concern": "blemishes"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Neutrogena Hydro Boost Gel",
+      "description": "Oil-free moisturizer with hyaluronic acid.",
+      "category": "Cosmetics",
+      "price": 18.99,
+      "rating": 4.5,
+      "stock": 280,
+      "attributes": {
+        "brand": "Neutrogena",
+        "use_case": "hydration",
+        "skin_type": "oily"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Fenty Beauty Foundation",
+      "description": "Matte foundation with 50 shades.",
+      "category": "Cosmetics",
+      "price": 40.00,
+      "rating": 4.6,
+      "stock": 200,
+      "attributes": {
+        "brand": "Fenty Beauty",
+        "use_case": "makeup",
+        "coverage": "full"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Budget Laptop for Students",
+      "description": "Affordable laptop with 8GB RAM for homework.",
+      "category": "Electronics",
+      "price": 499.00,
+      "rating": 4.2,
+      "stock": 120,
+      "attributes": {
+        "brand": "HP",
+        "use_case": "student",
+        "processor": "Intel i5"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Gaming Laptop RTX 4060",
+      "description": "High-performance laptop with dedicated GPU.",
+      "category": "Electronics",
+      "price": 1399.00,
+      "rating": 4.6,
+      "stock": 65,
+      "attributes": {
+        "brand": "ASUS",
+        "use_case": "gaming",
+        "gpu": "RTX 4060"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Adidas Ultraboost Running Shoes",
+      "description": "Running shoes with Boost cushioning.",
+      "category": "Fashion",
+      "price": 190.00,
+      "rating": 4.6,
+      "stock": 160,
+      "attributes": {
+        "brand": "Adidas",
+        "use_case": "running",
+        "type": "shoes"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Instant Pot 8-Quart",
+      "description": "9-in-1 pressure cooker for meal prep.",
+      "category": "Electronics",
+      "price": 119.99,
+      "rating": 4.7,
+      "stock": 200,
+      "attributes": {
+        "brand": "Instant Pot",
+        "use_case": "cooking",
+        "capacity": "8 quart"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Kindle Paperwhite",
+      "description": "Waterproof e-reader with 10-week battery.",
+      "category": "Electronics",
+      "price": 139.99,
+      "rating": 4.7,
+      "stock": 250,
+      "attributes": {
+        "brand": "Amazon",
+        "use_case": "reading",
+        "waterproof": true
+      }
+    },
+    {
+      "id": 26,
+      "name": "Wireless Earbuds Budget",
+      "description": "Affordable earbuds with 8-hour battery.",
+      "category": "Electronics",
+      "price": 49.99,
+      "rating": 4.3,
+      "stock": 350,
+      "attributes": {
+        "brand": "Anker",
+        "use_case": "everyday",
+        "type": "earbuds"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Lululemon Yoga Pants",
+      "description": "Soft yoga pants with high-rise waist.",
+      "category": "Fashion",
+      "price": 98.00,
+      "rating": 4.8,
+      "stock": 220,
+      "attributes": {
+        "brand": "Lululemon",
+        "use_case": "yoga",
+        "type": "pants"
+      }
+    },
+    {
+      "id": 28,
+      "name": "Timberland Waterproof Boots",
+      "description": "Durable boots for all weather.",
+      "category": "Fashion",
+      "price": 198.00,
+      "rating": 4.7,
+      "stock": 130,
+      "attributes": {
+        "brand": "Timberland",
+        "use_case": "outdoor",
+        "waterproof": true
+      }
+    },
+    {
+      "id": 29,
+      "name": "Paula's Choice BHA Exfoliant",
+      "description": "Salicylic acid exfoliant for pores.",
+      "category": "Cosmetics",
+      "price": 32.00,
+      "rating": 4.7,
+      "stock": 190,
+      "attributes": {
+        "brand": "Paula's Choice",
+        "use_case": "exfoliation",
+        "key_ingredient": "salicylic acid"
+      }
+    },
+    {
+      "id": 30,
+      "name": "Wireless Power Bank 20000mAh",
+      "description": "Portable charger with fast charging.",
+      "category": "Electronics",
+      "price": 39.99,
+      "rating": 4.6,
+      "stock": 250,
+      "attributes": {
+        "brand": "Anker",
+        "use_case": "charging",
+        "capacity": "20000mAh"
+      }
+    }
+  ]
