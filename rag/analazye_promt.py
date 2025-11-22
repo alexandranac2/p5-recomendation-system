@@ -1,14 +1,35 @@
 from langchain_openai import ChatOpenAI
+from pydantic import BaseModel, Field
+from typing import Optional, Dict, List
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+if not os.getenv("OPENAI_API_KEY"):
+    print("❌ Error: OPENAI_API_KEY not set")
+    print("   Create .env file with: OPENAI_API_KEY=sk-your-key")
+    exit(1)
+
+
+class understand_promt(BaseModel):
+    """What the LLM extracts from user query"""
+
+    intent: str = Field(description="search, gift, comparison, specific_need")
+    category: Optional[str] = None
+    price_range: Optional[Dict[str, float]] = None
+    attributes: Optional[Dict[str, str]] = None
+    use_case: Optional[str] = None
+    product: str = Field(description="The product that the user is searching for")
 
 
 def analyse_promt(queryString):
-    llm = ChatOpenAI(model="gpt-4o-mini")
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
-    response = llm.invoke(
+    response = llm.with_structured_output(understand_promt).invoke(
         "can you get the intension of the following query: "
         + queryString
-        + "Give me sinonyms for the product? As output plase give me just the array of synonyms. No other text or explanation. no ```json or ``` or anything else. Just the array of synonyms.Prepare this for similarity serch in FAISS vector store. So you need to give me the array of synonyms that will be used for similarity search in FAISS vector store."
     )
-    print(f"🔍 Analyse Promt Response: {response.content}")
-    print(f"📝 LLM Response (type: {type(response.content).__name__}): {response.content}")
-    return response.content
+    print(f"🔍 Analyse Promt Response: {response}")
+
+    return response
