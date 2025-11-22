@@ -23,6 +23,6 @@ def query_vector_store(query, vectorstore, k=5, format_results=True, max_score=N
         results = filtered_results
     
     if format_results:
-        from format_data import format_search_results
+        from rag.format_data import format_search_results
         return format_search_results(results)
     return results

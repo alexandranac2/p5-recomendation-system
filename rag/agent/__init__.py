@@ -1,4 +1,4 @@
-from rag.agent.recommendation_agent import RecommendationAgent
+from rag.agent.recommendation_agent import build_recommendation_graph
 
-__all__ = ["RecommendationAgent"]
+__all__ = ["build_recommendation_graph"]
 

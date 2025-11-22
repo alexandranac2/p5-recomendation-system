@@ -12,36 +12,30 @@ from rag.nodes import (
 )
 
 
-class RecommendationAgent:
-    """Simple recommendation agent"""
+def build_recommendation_graph(vectorstore):
+    """Build the workflow graph and return a function that accepts queries"""
+    workflow = StateGraph(AgentState)
     
-    def __init__(self, vectorstore):
-        self.vectorstore = vectorstore
-        self.graph = self._build_graph()
+    # Add nodes
+    workflow.add_node("analyze", analyze_intent_node)
+    workflow.add_node("search", partial(search_products_node, vectorstore=vectorstore))
+    workflow.add_node("refine", refine_results_node)
+    workflow.add_node("explain", explain_recommendations_node)
+    workflow.add_node("format", format_response_node)
     
-    def _build_graph(self):
-        """Build the workflow graph"""
-        workflow = StateGraph(AgentState)
-        
-        # Add nodes
-        workflow.add_node("analyze", analyze_intent_node)
-        workflow.add_node("search", partial(search_products_node, vectorstore=self.vectorstore))
-        workflow.add_node("refine", refine_results_node)
-        workflow.add_node("explain", explain_recommendations_node)
-        workflow.add_node("format", format_response_node)
-        
-        # Connect nodes
-        workflow.add_edge(START, "analyze")
-        workflow.add_edge("analyze", "search")
-        workflow.add_edge("search", "refine")
-        workflow.add_edge("refine", "explain")
-        workflow.add_edge("explain", "format")
-        workflow.add_edge("format", END)
-        
-        return workflow.compile()
+    # Connect nodes
+    workflow.add_edge(START, "analyze")
+    workflow.add_edge("analyze", "search")
+    workflow.add_edge("search", "refine")
+    workflow.add_edge("refine", "explain")
+    workflow.add_edge("explain", "format")
+    workflow.add_edge("format", END)
     
-    def recommend(self, query: str) -> Dict[str, Any]:
-        """Get recommendations for a query"""
+    compiled_graph = workflow.compile()
+    
+    # Return a function that handles state creation and execution
+    def run(query: str) -> Dict[str, Any]:
+        """Execute the recommendation graph with a query"""
         state: AgentState = {
             "query": query,
             "analyzed_intent": None,
@@ -50,8 +44,8 @@ class RecommendationAgent:
             "explanation": "",
             "formatted_response": None
         }
-        
-        final_state = self.graph.invoke(state)
-        
+        final_state = compiled_graph.invoke(state)
         return final_state["formatted_response"] or {}
+    
+    return run
 
