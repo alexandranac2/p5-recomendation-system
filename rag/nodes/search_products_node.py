@@ -1,5 +1,6 @@
 from rag.agent.state import AgentState
 from rag.query import query_vector_store
+from config.settings import settings
 
 
 def search_products_node(state: AgentState, vectorstore) -> AgentState:
@@ -17,13 +18,13 @@ def search_products_node(state: AgentState, vectorstore) -> AgentState:
         search_query = state["query"]
     
     print("search_query: ", search_query)
-    # Search
+    # Search using config values
     results = query_vector_store(
         search_query,
         vectorstore=vectorstore,
-        k=15,
+        k=settings.DEFAULT_SEARCH_K,
         format_results=True,
-        max_score=1.3
+        max_score=settings.MAX_SIMILARITY_SCORE
     )
     
     state["search_results"] = results

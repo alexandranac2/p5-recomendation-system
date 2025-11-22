@@ -13,6 +13,7 @@ def query_vector_store(query, vectorstore, k=5, format_results=True, max_score=N
     print(f"\nQuery: '{query}'")
     results = vectorstore.similarity_search_with_score(query, k=k)
     
+
     # Filter by score if threshold is provided
     if max_score is not None:
         filtered_results = [(doc, score) for doc, score in results if score <= max_score]

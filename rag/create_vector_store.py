@@ -5,10 +5,11 @@ from typing import Optional
 
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
+from config.settings import settings
 
 
 def create_load_vector_store(
-    name: str = "vectorstore",
+    name: Optional[str] = None,
     products_path: Optional[Path] = None
 ) -> FAISS:
     """
@@ -16,8 +17,12 @@ def create_load_vector_store(
     If the vectorstore already exists, loads and returns it.
     If it doesn't exist, loads products from products_path and creates it.
     """
+    # Use config default if name not provided
+    if name is None:
+        name = settings.VECTOR_STORE_NAME
+    
     embeddings = HuggingFaceEmbeddings(
-        model_name="sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+        model_name=settings.EMBEDDING_MODEL
     )
 
     project_root = (Path(__file__).parent.parent)

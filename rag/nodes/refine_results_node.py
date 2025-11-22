@@ -1,11 +1,12 @@
 from rag.agent.state import AgentState
+from config.settings import settings
 
 
 def refine_results_node(state: AgentState) -> AgentState:
     """
     Node 3: Refine results based on explicit intent constraints.
     
-    Note: Vector search already filtered by semantic similarity (max_score=1.3),
+    Note: Vector search already filtered by semantic similarity (max_score from config),
     so we only apply hard constraints like price ranges here.
     Category matching is lenient since vector search already found relevant products.
     """
@@ -49,8 +50,8 @@ def refine_results_node(state: AgentState) -> AgentState:
         
         filtered.append(result)
     
-    # Take top 5-8 results
-    state["recommendations"] = filtered[:8]
+    # Take top results based on config
+    state["recommendations"] = filtered[:settings.MAX_RECOMMENDATIONS_TO_RETURN]
     print(f"   {len(state['recommendations'])} recommendations")
     return state
 

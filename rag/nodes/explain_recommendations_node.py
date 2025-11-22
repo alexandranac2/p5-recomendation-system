@@ -1,5 +1,6 @@
 from langchain_openai import ChatOpenAI
 from rag.agent.state import AgentState
+from config.settings import settings
 
 
 def explain_recommendations_node(state: AgentState) -> AgentState:
@@ -16,7 +17,7 @@ def explain_recommendations_node(state: AgentState) -> AgentState:
     # Simple explanation
     products_text = "\n".join([
         f"- {r.get('name')} (${r.get('price', 0)})"
-        for r in recommendations[:3]
+        for r in recommendations[:settings.MAX_RECOMMENDATIONS_TO_EXPLAIN]
     ])
     
     prompt = f"""User asked: "{query}"
@@ -26,7 +27,10 @@ Top products:
 
 Explain in 2 sentences why these match the user's needs."""
     
-    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
+    llm = ChatOpenAI(
+        model=settings.LLM_MODEL,
+        temperature=settings.LLM_TEMPERATURE
+    )
     response = llm.invoke(prompt)
     
     state["explanation"] = response.content.strip()

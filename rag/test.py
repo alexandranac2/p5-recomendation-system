@@ -14,7 +14,8 @@ from query import query_vector_store
 
 # Load and process
 # inital_query = "coffee maker"
-inital_query = "Best running shoes under $200"
+# inital_query = "Best running shoes under $200"
+inital_query = "food for my pet"
 name = "alexs_vectorstore"
 products_path = Path(__file__).parent.parent / "data" / "products.json"
 
